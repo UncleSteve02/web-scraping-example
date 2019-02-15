@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-page = requests.get("https://www.checkiday.com").text
+page = requests.get("https://www.checkiday.com", verify=False).text
 
 soup = BeautifulSoup(page, 'html.parser')
 h2s = soup.find_all('h2')
